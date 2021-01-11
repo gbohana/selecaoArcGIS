@@ -1,8 +1,8 @@
 require([
     "esri/WebMap",
-    "esri/views/MapView", "esri/layers/FeatureLayer"
+    "esri/views/MapView", "esri/layers/FeatureLayer", "esri/widgets/Editor",
   
-  ], function(WebMap, MapView, FeatureLayer) {
+  ], function(WebMap, MapView, FeatureLayer, Editor) {
     
     //visualize webmap on the browser
     var webmap = new WebMap({
@@ -69,6 +69,21 @@ require([
         webmap.remove(PIBlayer);
       }
     })
-    
+
+    const editThisAction = {
+      title: "Editar informações",
+      id: "edit-this",
+      className: "esri-icon-edit"
+    };
+
+    var template = {
+      title: "{municipio}",
+      content: "A cidade de {municipio} possui uma população de {populacao} habitantes, IDHM de {idhm} e PIB de {pib}.",
+      actions: [editThisAction]
+    };
+
+    Poplayer.popupTemplate = template;
+    IDHMlayer.popupTemplate = template;
+    PIBlayer.popupTemplate = template;
     
   });
