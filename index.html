@@ -12,11 +12,16 @@
     <script src="./script.js"></script>
 </head>
 <body>
-  <br> Escolha a camada a ser mostrada : <span id="layer_list"> 
-    <input type='checkbox' class='list_item' id='PopCheckbox' />População
-    <input type='checkbox' class='list_item' id='IDHMCheckbox' />IDHM
-    <input type='checkbox' class='list_item' id='PIBCheckbox' />PIB
-  </span></br>
+  <div id="container">
+    <h1>Dados da Bahia</h1>
+    <div id="instrucao"> Habilite a(s) camada(s):</div> 
+    <div id="layer_list"> 
+      <br> <input type='checkbox' class='list_item' id='PopCheckbox' />População
+      <br> <input type='checkbox' class='list_item' id='IDHMCheckbox' />IDHM
+      <br> <input type='checkbox' class='list_item' id='PIBCheckbox' />PIB
+    </div> 
+  </div>
   <div id="viewDiv"></div>
+
 </body>
 </html>
