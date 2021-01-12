@@ -85,5 +85,13 @@ require([
     Poplayer.popupTemplate = template;
     IDHMlayer.popupTemplate = template;
     PIBlayer.popupTemplate = template;
+
+    let editor = new Editor({
+      view: view
+      // Pass in any other additional property as needed
+    });
+    
+    // Add widget to top-right of the view
+    view.ui.add(editor, "top-right");
     
   });
