@@ -1,6 +1,6 @@
 require([
     "esri/WebMap",
-    "esri/views/MapView", "esri/layers/FeatureLayer", "esri/widgets/Editor",
+    "esri/views/MapView", "esri/layers/FeatureLayer", "esri/widgets/Editor"
   
   ], function(WebMap, MapView, FeatureLayer, Editor) {
     
